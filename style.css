@@ -9,6 +9,7 @@
 body{
     background:#050505;
     color:white;
+    overflow-x:hidden;
 }
 
 /* HEADER */
@@ -97,9 +98,26 @@ nav a:hover{
 }
 
 .hero img{
-    width:420px;
-    border-radius:25px;
-    box-shadow:0 0 30px rgba(255,0,0,0.4);
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid red;
+    box-shadow:0 0 35px rgba(255,0,0,0.6);
+    animation:glow 2s infinite alternate;
+}
+
+/* GLOW EFFECT */
+
+@keyframes glow{
+
+    from{
+        box-shadow:0 0 20px rgba(255,0,0,0.4);
+    }
+
+    to{
+        box-shadow:0 0 50px rgba(255,0,0,1);
+    }
 }
 
 /* BUTTONS */
@@ -121,7 +139,7 @@ nav a:hover{
 }
 
 .red:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 .pink{
@@ -129,7 +147,7 @@ nav a:hover{
 }
 
 .pink:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 /* SECTION */
@@ -174,7 +192,7 @@ nav a:hover{
 
 .stats div:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 20px rgba(255,0,0,0.2);
+    box-shadow:0 0 20px rgba(255,0,0,0.3);
 }
 
 .stats h2{
@@ -199,10 +217,11 @@ nav a:hover{
     border:none;
     border-radius:18px;
     transition:0.3s;
+    box-shadow:0 0 20px rgba(255,0,0,0.15);
 }
 
 .video-box iframe:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 /* SOCIAL */
@@ -284,7 +303,7 @@ footer{
     margin-top:50px;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -312,8 +331,8 @@ footer{
     }
 
     .hero img{
-        width:90%;
-        max-width:380px;
+        width:280px;
+        height:280px;
     }
 
     .stats{
