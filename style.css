@@ -99,7 +99,7 @@ nav a:hover{
     line-height:1.7;
 }
 
-/* RIGHT SIDE CIRCLE LOGO */
+/* RIGHT SIDE CREATOR LOGO */
 
 .creator-circle{
     width:380px;
@@ -110,14 +110,33 @@ nav a:hover{
     box-shadow:
     0 0 25px rgba(255,0,0,0.8),
     0 0 60px rgba(255,0,0,0.5);
+
     animation:glow 2s infinite alternate;
-    flex-shrink:0;
 }
+
+/* IMAGE INSIDE CIRCLE */
 
 .creator-circle img{
     width:100%;
     height:100%;
     object-fit:cover;
+}
+
+/* GLOW ANIMATION */
+
+@keyframes glow{
+
+    from{
+        box-shadow:
+        0 0 20px rgba(255,0,0,0.4),
+        0 0 40px rgba(255,0,0,0.3);
+    }
+
+    to{
+        box-shadow:
+        0 0 35px rgba(255,0,0,1),
+        0 0 80px rgba(255,0,0,0.8);
+    }
 }
 
 /* OLD HERO IMAGE SUPPORT */
