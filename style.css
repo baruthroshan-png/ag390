@@ -9,6 +9,7 @@
 body{
     background:#050505;
     color:white;
+    overflow-x:hidden;
 }
 
 /* HEADER */
@@ -76,6 +77,8 @@ nav a:hover{
     gap:50px;
 }
 
+/* LEFT SIDE TEXT */
+
 .hero-text{
     flex:1;
 }
@@ -96,10 +99,74 @@ nav a:hover{
     line-height:1.7;
 }
 
-.hero img{
-    width:420px;
-    border-radius:25px;
-    box-shadow:0 0 30px rgba(255,0,0,0.4);
+/* RIGHT SIDE CREATOR LOGO */
+
+.creator-circle{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid red;
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.8),
+    0 0 60px rgba(255,0,0,0.5);
+
+    animation:glow 2s infinite alternate;
+}
+
+/* IMAGE INSIDE CIRCLE */
+
+.creator-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* GLOW ANIMATION */
+
+@keyframes glow{
+
+    from{
+        box-shadow:
+        0 0 20px rgba(255,0,0,0.4),
+        0 0 40px rgba(255,0,0,0.3);
+    }
+
+    to{
+        box-shadow:
+        0 0 35px rgba(255,0,0,1),
+        0 0 80px rgba(255,0,0,0.8);
+    }
+}
+
+/* OLD HERO IMAGE SUPPORT */
+
+.hero > img{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid red;
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.8),
+    0 0 60px rgba(255,0,0,0.5);
+    animation:glow 2s infinite alternate;
+}
+
+/* GLOW EFFECT */
+
+@keyframes glow{
+    from{
+        box-shadow:
+        0 0 20px rgba(255,0,0,0.4),
+        0 0 40px rgba(255,0,0,0.3);
+    }
+
+    to{
+        box-shadow:
+        0 0 35px rgba(255,0,0,1),
+        0 0 80px rgba(255,0,0,0.8);
+    }
 }
 
 /* BUTTONS */
@@ -121,7 +188,7 @@ nav a:hover{
 }
 
 .red:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 .pink{
@@ -129,7 +196,7 @@ nav a:hover{
 }
 
 .pink:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 /* SECTION */
@@ -174,7 +241,7 @@ nav a:hover{
 
 .stats div:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 20px rgba(255,0,0,0.2);
+    box-shadow:0 0 20px rgba(255,0,0,0.3);
 }
 
 .stats h2{
@@ -199,10 +266,11 @@ nav a:hover{
     border:none;
     border-radius:18px;
     transition:0.3s;
+    box-shadow:0 0 20px rgba(255,0,0,0.15);
 }
 
 .video-box iframe:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 /* SOCIAL */
@@ -284,7 +352,7 @@ footer{
     margin-top:50px;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -311,9 +379,14 @@ footer{
         font-size:45px;
     }
 
-    .hero img{
-        width:90%;
-        max-width:380px;
+    .creator-circle{
+        width:280px;
+        height:280px;
+    }
+
+    .hero > img{
+        width:280px;
+        height:280px;
     }
 
     .stats{
